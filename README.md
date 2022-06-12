@@ -12,8 +12,7 @@ Esta app te permitira:
 **Al entrar a la  aplicacion por primera vez**
 
  - Aparecera una pantalla con la seleccion de modos para la visualización
- - La persona no puede ver nada de la app hasta que inicie sesion
- 
+
  **Al ingresar**
  
  - El usuario podra ver la pagina principal que cuenta con Todas las peliculas de Star Wars disponibles en la api.

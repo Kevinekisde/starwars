@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Cards from '../Components/Cards'
 import Footer from '../Sections/Footer';
 import Navbar from '../Sections/Navbar'
+import s from '../Styles/Home.module.css'
 import { CardsContainer, Container, Movies } from '../Styles/HomeStyles';
 import Loading from './Loading';
 import "animate.css";
@@ -24,7 +25,7 @@ export const Home = () => {
 
 
   return (
-    <div>
+    <div className={s.Container}>
       {
         apiInfo?.length > 0 ?
           <Container>

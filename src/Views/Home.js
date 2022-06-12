@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Cards from '../Components/Cards'
 import Footer from '../Sections/Footer';
 import Navbar from '../Sections/Navbar'
-import s from '../Styles/Home.module.css'
 import { CardsContainer, Container, Movies } from '../Styles/HomeStyles';
 import Loading from './Loading';
 import "animate.css";
@@ -19,13 +18,13 @@ export const Home = () => {
       setApiInfo(res.data.results)
     }
     setTimeout(() =>
-    fetchData(),1500)
+      fetchData(), 1000)
   }, [])
 
 
 
   return (
-    <div className={s.Container}>
+    <div>
       {
         apiInfo?.length > 0 ?
           <Container>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import starWars from '../assets/starwarsback.png'
+
 
 
 export const InfoContainer = styled.div`

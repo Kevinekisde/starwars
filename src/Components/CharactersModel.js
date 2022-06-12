@@ -3,12 +3,11 @@ import { Container, Heading,NameContainer } from '../Styles/CharactersModelStyle
 import { CharacterCard } from './CharacterCard'
 
 const CharactersModel = ({ arrayInfo,title }) => {
-    const [currentPage, setCurrentPage] = useState(1)
+    const [currentPage, /*setCurrentPage*/] = useState(1)
     const [characterPerPage, /*setCharacterPerPage*/] = useState(4)
     const indexOfLastCharacter = currentPage * characterPerPage
     const indexOfFirstCharacter = indexOfLastCharacter - characterPerPage
-    const currentCharacter = arrayInfo.slice(indexOfFirstCharacter, indexOfLastCharacter)
-
+    const MainInfo = arrayInfo.slice(indexOfFirstCharacter, indexOfLastCharacter)
 
     return (
         <Container>
@@ -19,7 +18,7 @@ const CharactersModel = ({ arrayInfo,title }) => {
             <div>
                 <NameContainer>
                     {
-                        currentCharacter.map((character) => {
+                        MainInfo.map((character) => {
                             return (
                                 <CharacterCard
                                     name={character.name}

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import LogoStar from '../assets/starwarslogo.png'
+
 
 
 export const Container = styled.div`

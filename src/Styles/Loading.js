@@ -18,7 +18,7 @@ export const Intro = styled.div`
   text-align: center;
   color: rgb(75, 213, 238);
   font-size: 200%;
-  animation: intro 1000s ease-out infinite;
+  animation: intro 100s ease-out infinite;
 
   @keyframes intro {
     0% {

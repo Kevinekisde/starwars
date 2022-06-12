@@ -22,6 +22,7 @@ button{
 
 img{
     width: 10%;
+    margin-right:7%;
 }
 
 

@@ -7,6 +7,7 @@ import Navbar from '../Sections/Navbar'
 import s from '../Styles/Home.module.css'
 import { CardsContainer, Container, Movies } from '../Styles/HomeStyles';
 import Loading from './Loading';
+import "animate.css";
 
 
 export const Home = () => {
@@ -17,10 +18,10 @@ export const Home = () => {
       let res = await axios("https://swapi.dev/api/films/")
       setApiInfo(res.data.results)
     }
-    setTimeout(() => {
-      fetchData()
-    }, 1000)
+    setTimeout(() =>
+    fetchData(),1500)
   }, [])
+
 
 
   return (
@@ -29,23 +30,26 @@ export const Home = () => {
         apiInfo?.length > 0 ?
           <Container>
             <Navbar />
-            <Movies>
-              <h1>Films</h1>
-              <CardsContainer>
-                {
-                  apiInfo.map((Movie, i) => {
-                    return (
-                      <Link to={`/home/${i + 1}`}>
-                        <Cards
-                          Title={Movie.title}
-                          EpisodeId={Movie.episode_id}
-                        />
-                      </Link>
-                    )
-                  })
-                }
-              </CardsContainer>
-            </Movies>
+            <div class="animate__animated animate__backInUp">
+
+              <Movies>
+                <h1>Films</h1>
+                <CardsContainer>
+                  {
+                    apiInfo.map((Movie, i) => {
+                      return (
+                        <Link to={`/home/${i + 1}`}>
+                          <Cards
+                            Title={Movie.title}
+                            EpisodeId={Movie.episode_id}
+                          />
+                        </Link>
+                      )
+                    })
+                  }
+                </CardsContainer>
+              </Movies>
+            </div>
             <Footer></Footer>
           </Container>
           :
